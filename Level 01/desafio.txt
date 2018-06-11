@@ -1,0 +1,9 @@
+⛶ Desafio 001.
+• Crie um programa que contenha um Label e dois Botões.
+  - O Botão 01, deve conter o texto: "Fritar".
+  - O Botão 02, deve conter o texto: "Assar".
+  - Quando o Botão 01 terminar de ser pressionado, o texto do Label deve ser modificado para: "Batata Frita".
+  - Quando o Botão 02 terminar de ser pressionado, o texto do Label deve ser modificado para: "Batata Assada".
+• Faça em duas versões, uma utilizando kvlang e outra sem utilizar kvlang.
+
+*OBS: Não existe restrições em relação à estética e organização do layout do programa.
