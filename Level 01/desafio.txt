@@ -6,4 +6,4 @@
   - Quando o Botão 02 terminar de ser pressionado, o texto do Label deve ser modificado para: "Batata Assada".
 • Faça em duas versões, uma utilizando kvlang e outra sem utilizar kvlang.
 
-*OBS: Não existe restrições em relação à estética e organização do layout do programa.
+*OBS: Não existem restrições em relação à estética e organização do layout do programa.
