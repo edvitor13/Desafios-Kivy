@@ -1,0 +1,16 @@
+⛶ Desafio 002. Utilizando Imagens.
+
+• Crie um programa responsável por contar quantas batatas foram fritas e quantas foram assadas.
+  • A tela deve ser dividida em 3 partes, uma responsável por exibir uma imagem, 
+  outra por exibir as informações de contagem e por fim uma parte responsável pelos botões.
+
+  1. A área responsável por exibir a imagem: deve conter como imagem base, a imagem de uma batata.
+  2. A área responsável por exibir as informações de contagem: deve conter os textos "Fritas" e "Assadas",
+  seguidos respectivamente pelo número de vezes que cada opção foi clicada (contador).
+  3. A área responsável pelos botões: deve conter dois botões, um com o texto "Assar" e o outro com o texto "Fritar".
+    - Quando o botão "Assar" terminar de ser clicado, a imagem base deve ser trocada por uma imagem de batata ASSADA e 
+    simultaneamente deve ser somado +1 no contador de batatas assadas.
+    - Quando o botão "Fritar" terminar de ser clicado, a imagem base deve ser trocada por uma imagem de batata FRITA e 
+    simultaneamente deve ser somado +1 no contador de batatas fritas.
+
+*OBS: Não existem restrições em relação à estética do programa.
