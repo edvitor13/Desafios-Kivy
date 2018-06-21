@@ -1,6 +1,6 @@
 '''
 ⛶ Desafio 002. Utilizando Imagens.
-------------------------------------
+-----------------------------------
 Author:    Vitor Gabriel
 Version:   1.0
 Date:      2018/06/15
