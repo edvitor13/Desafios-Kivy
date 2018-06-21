@@ -1,0 +1,25 @@
+⛶ Desafio 003. Jogo da Memória.
+
+• Crie um Jogo da Memória.
+
+  - Deve ser dividido em duas etapas. A primeira etapa é responsável por informar ao usuário o nome do jogo e fornecer uma opção para que ele inicie o jogo. A segunda etapa é o jogo em si.
+
+  • O jogo:
+    - Deve conter no mínimo 3 imagens diferentes e um contador de pontuação.
+    - As imagens devem ser distribuídas de forma aleatória.
+    - A ordem das imagens deve ser exibida para o usuário por um tempo (ex. 3 segundos) antes de permitir que ele escolha alguma delas.
+    - Assim que o tempo de exibição acabar, as imagens devem ser ocultadas, e só podem ser exibidas novamente quando o usuário selecionar alguma.
+    - Se o usuário selecionar uma imagem e em seguida outra imagem igual, elas são reveladas, e não podem ser selecionadas novamente. O usuário acertou.
+    - Se o usuário selecionar uma imagem e em seguida outra imagem diferente, elas se ocultam novamente, e podem ser selecionadas novamente. O usuário errou.
+    - Se todas as imagens estiverem reveladas, o usuário venceu e esta rodada foi finalizada.
+    - Fim de rodada: As imagens devem ser embaralhadas novamente e o jogo recomeça (sem resetar a pontuação).
+
+  • O jogo, contador de pontuação:
+    - Sempre deve ser exibida (exceto durante o tempo de exibição das imagens) e de forma atualizada.
+    - A pontuação inicial deve ser 0.
+    - Pode ter valores negativos.
+    - Quando o usuário acerta, soma 1.
+    - Quando o usuário erra, subtrai 1.
+    - Quando o jogo recomeça, a pontuação NÃO é resetada. 
+
+*OBS: Não existem restrições em relação à estética do programa.
