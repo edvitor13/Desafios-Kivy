@@ -1,3 +1,12 @@
+'''
+⛶ Desafio 001.
+-----------------------------------
+Author:    Vitor Gabriel
+Version:   1.0
+Date:      2018/06/15
+Email:     edvitor13@hotmail.com
+'''
+
 from functools import partial
 from kivy.app import App
 from kivy.uix.button import Button
