@@ -2,7 +2,7 @@
 Desafio 003. Jogo da Memória.
 ------------------------------------
 Author:    Vitor Gabriel
-Version:   1.0
+Version:   1.1
 Date:      2018/06/20
 Email:     edvitor13@hotmail.com
 '''
@@ -12,6 +12,7 @@ from functools import partial
 import threading
 import time
 import random
+import os
 
 # Kivy #
 import kivy
@@ -47,13 +48,38 @@ Builder.load_file('kvlang.kv')
 class JogoDaMemoria:
     # Imagens que serão utilizadas
     imagens = ['IMG/bola.png', 'IMG/bandeira-brasil.png', 'IMG/bandeira-suica.png', 'IMG/falta.png', 'IMG/estadio.png', 'IMG/jogador.png']
+    # Carregar as Imagens automaticamente
+    imagens_autocarregar = True
+    # Pasta de Carregamento
+    imagens_autocarregar_pasta = 'IMG/'
     # Responsável pela ordem das imagens no jogo e seus respectivos pares
     memoria = []
     # Quantidade de Colunas que o "GridMemoria" terá
     colunas = None
 
     def __init__(self):
+        if (self.imagens_autocarregar == True):
+            self.carregar_imagens()
         self.gerar_memoria()
+
+    # Responsável por carregar as imagens da pasta predefinida
+    def carregar_imagens(self):
+
+        # Lista de arquivos da pasta
+        arquivos = os.listdir(self.imagens_autocarregar_pasta)
+
+        # Lista de arquivos que foram permitidos
+        arquivos_permitidos = []
+
+        for i in range(len(arquivos)):
+            # Verificando arquivos permitidos
+            if (arquivos[i].lower().endswith(".jpg") or arquivos[i].lower().endswith(".jpeg") or arquivos[i].lower().endswith(".jpe") or arquivos[i].lower().endswith(".png") or arquivos[i].lower().endswith(".gif") or arquivos[i].lower().endswith(".tif") or arquivos[i].lower().endswith(".tif")):
+                # Caso tenha algum dos formatos de imagem acima
+                # adiciona para a lista de arquivos permitidos
+                arquivos_permitidos.append(self.imagens_autocarregar_pasta + arquivos[i])
+
+        # Adicionando imagens encontradas
+        self.imagens = arquivos_permitidos
 
     # Gera o conteúdo de self.memoria
     def gerar_memoria(self):
@@ -359,7 +385,7 @@ sm.add_widget(TelaJogo(name='tela_jogo'))
 
 # Classe do Programa
 class ProgramaApp(App):
-    # Título da Janela
+	# Título da Janela
     title = 'Jogo da Memória'
 
     def build(self):
