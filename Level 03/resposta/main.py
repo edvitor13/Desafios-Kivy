@@ -7,7 +7,6 @@ Date:      2018/06/20
 Email:     edvitor13@hotmail.com
 '''
 
-
 # Geral #
 from functools import partial
 import threading
