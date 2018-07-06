@@ -7,6 +7,7 @@ Date:      2018/06/20
 Email:     edvitor13@hotmail.com
 '''
 
+
 # Geral #
 from functools import partial
 import threading
@@ -359,7 +360,7 @@ sm.add_widget(TelaJogo(name='tela_jogo'))
 
 # Classe do Programa
 class ProgramaApp(App):
-	# Título da Janela
+    # Título da Janela
     title = 'Jogo da Memória'
 
     def build(self):
