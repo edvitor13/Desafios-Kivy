@@ -1,0 +1,37 @@
+Depois do grade sucesso dos Desafios 001, 002 e 003, resolvemos lançar o Desafio de Nível 4!
+
+Caso tenha qualquer dúvida (tanto deste desafio quanto de anteriores), poste aqui no grupo.
+
+⛶ *Desafio 004. Editor de Imagem.*
+
+• Crie um mini Editor de Imagem.
+
+  - Deve conter duas telas, *Tela Inicial* e *Tela de Edição*.
+
+  • Tela Inicial:
+    - Responsável por receber a imagem que o usuário deseja editar.
+    - Nesta tela o usuário pode arrastar algum arquivo de seu computador para dentro do programa, e se for uma imagem, ela deve ser aberta. Caso seja uma imagem/arquivo inválida(o), o usuário deve ser informado.
+
+  • Tela de Edição:
+    - A imagem selecionada pelo usuário deve ser exibida aqui.
+    - Nesta tela deve conter além da imagem: "Botões de Edição" e um "Botão de Salvamento".
+  
+  • Botões de Edição:
+    - Devem ser criados no mínimo 3 botões, e cada um deles realiza uma modificação na imagem assim que terminar de ser pressionado.
+    - Botão 1: Girar a imagem 90º no sentido anti-horário.
+    - Botão 2: Girar a imagem 90º no sentido horário.
+    - Botão 3: Deixar a imagem sem cores (Preto e Branco).
+    - Sempre que algum dos botões terminar de ser pressionado, o resultado da edição deve ser exibido para o usuário na imagem de exibição.
+
+  • Botão de Salvamento:
+    - Quando terminar de ser pressionado, deve exibir uma "Tela ou Popup de Pastas".
+
+  • Tela ou Popup de Pastas:
+    - Responsável por listar as pastas disponíveis no computador do usuário e permitir que ele escolha alguma delas para salvar a imagem.
+    - Deve conter uma área de texto, para que o usuário escreva o nome da imagem.
+    - E deve conter dois botões, um que que realiza o salvamento e outro que permite cancelar o salvamento.
+
+• Quando a imagem for salva, o programa deve voltar para a "Tela Inicial" e recomeçar.
+
+
+*OBS: Não existem restrições em relação à estética do programa.
