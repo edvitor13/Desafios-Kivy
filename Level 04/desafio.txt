@@ -1,7 +1,3 @@
-Depois do grade sucesso dos Desafios 001, 002 e 003, resolvemos lançar o Desafio de Nível 4!
-
-Caso tenha qualquer dúvida (tanto deste desafio quanto de anteriores), poste aqui no grupo.
-
 ⛶ *Desafio 004. Editor de Imagem.*
 
 • Crie um mini Editor de Imagem.
