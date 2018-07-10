@@ -1,4 +1,4 @@
-⛶ *Desafio 004. Editor de Imagem.*
+⛶ Desafio 004. Editor de Imagem.
 
 • Crie um mini Editor de Imagem.
 
