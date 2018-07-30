@@ -1,0 +1,27 @@
+﻿⛶ Desafio 005. Desenhador com Canetas.
+
+• Crie um programa que permita o usuário desenhar na tela, utilizando no mínimo 3 opções de cores diferentes.
+
+  - Deve conter duas telas, *"Tela das Canetas"* e *"Tela de Desenho"*.
+
+  • Tela das Canetas:
+    - Nesta tela o usuário pode escolher a cor e a quantidade de tinta da caneta que será utilizada para desenhar na "Tela de Desenho".
+    - Deve conter dois botões:
+        *Botão 01:* Responsável por Tampar ou Destampar a caneta.
+        *Botão 02:* Responsável por mudar para a "Tela de Desenho".
+
+  • Tela de Desenho:
+    - Esta tela deve conter um espaço reservado para o usuário desenhar livremente com as cores escolhidas na "Tela das Canetas".
+    - Deve conter dois botões:
+        *Botão 01:* Responsável por voltar para a "Tela de Canetas".
+        *Botão 02:* Responsável por limpar o desenho feito pelo usuário até o momento.
+
+  • Regras:
+    - Enquanto o usuário desenha, a quantidade de tinta da caneta deve ser reduzida gradativamente.
+    - Enquanto a caneta estiver tampada ou destampada, essa informação deve ser exibida para o usuário.
+    - A quantidade de tinta disponível deve sempre ser atualizada e exibida para o usuário.
+    - Se a tinta da caneta acabar, o usuário não consegue desenhar, e deve voltar para a "Tela de Canetas" para repor a quantidade de tinta.
+    - As informações (cor, quantidade de tinta, se está tampada ou não) devem ser exibidas para o usuário através de imagens. (imagens utilizadas no exemplo disponíveis na pasta "material_de_apoio" do repositório do Desafio 05)
+
+    
+*OBS: Não existem restrições em relação à estética do programa.*
