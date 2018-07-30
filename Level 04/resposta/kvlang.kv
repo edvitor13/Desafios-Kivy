@@ -1,0 +1,155 @@
+# Cores:
+# .65, .65, .65, .5 (Cinza 50%)
+# .64, .22, .22, 1. (Vermelho 100%)
+# .17, .32, .62, 1. (Azul 100%)
+
+<BotaoEfeitos@HoverBehavior+Button>:
+	background_normal: ''
+	background_down: ''
+	background_color: .65, .65, .65, .5
+	on_press:
+		self.background_color = .64, .22, .22, 1
+	on_release:
+		self.background_color = .65, .65, .65, .5
+    on_enter:
+        self.background_color = .78, .24, .24, 1
+    on_leave:
+        self.background_color = .65, .65, .65, .5
+
+<BotaoSalvar@HoverBehavior+Button>:
+	background_normal: ''
+	background_down: ''
+	background_color: .55, .55, .55, .5
+	on_press:
+		self.background_color = .17, .32, .62, 1
+	on_release:
+		self.background_color = .55, .55, .55, .5
+    on_enter:
+        self.background_color = .23, .41, .78, 1
+    on_leave:
+        self.background_color = .55, .55, .55, .5
+
+<TelaInicial@Screen>:
+	BoxLayout:
+		padding: 15, 15, 15, 15
+		BoxLayout:
+			orientation: 'vertical'
+			canvas.before:
+				Color:
+					rgba: .85, .85, .85, 1
+				RoundedRectangle:
+					size: self.size
+					pos: self.pos
+					radius: [5, 5, 5, 5]
+				Color:
+					rgba: .92, .92, .92, 1
+				RoundedRectangle:
+					size: self.size[0] - 12, self.size[1] - 12
+					pos: self.pos[0] + 6, self.pos[1] + 6,
+					radius: [5, 5, 5, 5]
+			BoxLayout:
+				BoxLayout:
+					padding: 10, 10
+					size_hint: .5, .5
+					Image:
+						source: 'public/img/icons/documento_imagem.png'
+						valign: 'bottom'
+			Label:
+				id: mensagem
+				markup: True
+				text: '[b]Procure uma imagem[/b] e arraste ela aqui'
+				color: .57, .57, .57, 1
+				font_size: '20dp'
+				text_size: self.size
+				halign: 'center'
+				valign: 'top'
+				padding: 10, 10
+
+<TelaEdicao@Screen>:
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 10, 10
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint: 1, None
+			height: '100dp'
+			spacing: '10dp'
+			BotaoEfeitos:
+				#text: '<'
+				on_release: root.girar_antihorario()
+				Image:
+					source: 'public/img/icons/girar_antihorario_2.png'
+					x: self.parent.x + ((self.parent.size[0] / 2) - 32)
+	                y: self.parent.y + ((self.parent.size[1] / 2) - 32)
+	                size_hint: None, None
+	                width: 64
+	                height: 64
+
+			BotaoEfeitos:
+				#text: '>'
+				on_release: root.girar_horario()
+				Image:
+					source: 'public/img/icons/girar_horario_2.png'
+					x: self.parent.x + ((self.parent.size[0] / 2) - 32)
+	                y: self.parent.y + ((self.parent.size[1] / 2) - 32)
+	                size_hint: None, None
+	                width: 64
+	                height: 64
+			BotaoEfeitos:
+				on_release: root.preto_e_branco()
+				Image:
+					source: 'public/img/icons/preto_e_branco_2.png'
+					x: self.parent.x + ((self.parent.size[0] / 2) - 32)
+	                y: self.parent.y + ((self.parent.size[1] / 2) - 32)
+	                size_hint: None, None
+	                width: 64
+	                height: 64
+	    Label:
+	    	size_hint: 1, None
+	    	height: '10dp'
+
+		BoxLayout:
+			id: conteudo_edicao
+			size_hint: 1, 1
+
+		Label:
+	    	size_hint: 1, None
+	    	height: '10dp'
+
+		BoxLayout:
+			size_hint: 1, None
+			height: '100dp'
+			BotaoSalvar:
+				text: 'SALVAR'
+				font_size: '30dp'
+				on_release: root.show_save()
+
+<SaveDialog@FloatLayout>:
+    text_input: text_input
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserIconView:
+            id: filechooser
+            path: ''
+            filter_dirs: True
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+        TextInput:
+            id: text_input
+            size_hint_y: None
+            height: 30
+            multiline: False
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancelar"
+                on_release: root.cancel()
+
+            Button:
+                text: "Salvar"
+                on_release: root.save(filechooser.path, text_input.text)
